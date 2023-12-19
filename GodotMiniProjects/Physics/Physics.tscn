@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy1c0optbwokd"]
+
+[ext_resource type="Script" path="res://Physics/PhysicsPlayer.gd" id="1_fbjqw"]
+[ext_resource type="Texture2D" uid="uid://ix6e17ijnmox" path="res://Physics/PhysicsCharacter.png" id="1_kmjt3"]
+[ext_resource type="PackedScene" uid="uid://ckq1rr0oh7tsv" path="res://Physics/Crate.tscn" id="3_hnvto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dety8"]
+size = Vector2(18, 18)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+linear_damp = 1.0
+script = ExtResource("1_fbjqw")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_kmjt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_dety8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Crate" parent="." instance=ExtResource("3_hnvto")]
+gravity_scale = 0.0
+
+[node name="Crate2" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(115, 49)
+gravity_scale = 0.0
+
+[node name="Crate3" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(-3, 39)
+gravity_scale = 0.0
+
+[node name="Crate4" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(28, -10)
+gravity_scale = 0.0
+
+[node name="Crate9" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(29, -38)
+gravity_scale = 0.0
+
+[node name="Crate10" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(-11, -40)
+gravity_scale = 0.0
+
+[node name="Crate11" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(84, -48)
+gravity_scale = 0.0
+
+[node name="Crate5" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(41, 24)
+gravity_scale = 0.0
+
+[node name="Crate6" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(20, 52)
+gravity_scale = 0.0
+
+[node name="Crate7" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(-47, 49)
+gravity_scale = 0.0
+
+[node name="Crate8" parent="." instance=ExtResource("3_hnvto")]
+position = Vector2(-61, -44)
+gravity_scale = 0.0
